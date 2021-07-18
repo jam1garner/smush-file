@@ -1,0 +1,29 @@
+[package]
+name = "smush-file"
+version = "0.5.1"
+edition = "2018"
+
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "smush-file"
+path = "src/main.rs"
+
+[dependencies]
+nutexb = { git = "https://github.com/jam1garner/nutexb" }
+ssbh_lib = "0.9" 
+binread = "2.1.1"
+prc-rs = "1.3.2"
+nus3audio = "1.1.0"
+humansize = "1.1.0"
+smash-sli = { git = "https://github.com/jam1garner/smash-sli" }
+smash-csb = { git = "https://github.com/jam1garner/smash-csb", features = ["derive_serde"] }
+serde_yaml = "0.8.17"
+sqb-rs = { git = "https://github.com/BenHall-7/sqb-rs" }
+
+# arc feature
+smash-arc = { version = "0.2.1", features=["libzstd"], optional = true }
+
+[features]
+arc = ["smash-arc"]
