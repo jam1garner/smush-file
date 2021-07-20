@@ -12,6 +12,8 @@ pub mod sli;
 pub mod csb;
 pub mod sqb;
 
+mod c_api;
+
 #[derive(Debug, Clone, Copy)]
 pub enum FileType {
     Nutexb,

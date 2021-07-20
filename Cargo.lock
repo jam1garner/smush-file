@@ -969,7 +969,7 @@ dependencies = [
 
 [[package]]
 name = "smush-file"
-version = "0.1.0"
+version = "0.5.1"
 dependencies = [
  "binread 2.1.1",
  "humansize",
