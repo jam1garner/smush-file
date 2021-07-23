@@ -1,6 +1,6 @@
 [package]
 name = "smush-file"
-version = "0.6.0"
+version = "0.7.0"
 edition = "2018"
 
 [lib]
@@ -22,6 +22,8 @@ smash-sli = { git = "https://github.com/jam1garner/smash-sli" }
 smash-csb = { git = "https://github.com/jam1garner/smash-csb", features = ["derive_serde"] }
 serde_yaml = "0.8.17"
 sqb-rs = { git = "https://github.com/BenHall-7/sqb-rs" }
+smash-svt = { git = "https://github.com/jam1garner/smash-svt", features = ["derive_serde"] }
+smash-fnv = { git = "https://github.com/jam1garner/smash-fnv", features = ["derive_serde"] }
 
 # arc feature
 smash-arc = { version = "0.2.1", features=["libzstd"], optional = true }

@@ -959,6 +959,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "smash-fnv"
+version = "0.9.0"
+source = "git+https://github.com/jam1garner/smash-fnv#8f952331f10234eda9339ebb7c7d97e67a5cb025"
+dependencies = [
+ "binread 1.4.1",
+ "binwrite 0.2.1",
+ "serde",
+]
+
+[[package]]
 name = "smash-sli"
 version = "0.8.1"
 source = "git+https://github.com/jam1garner/smash-sli#ef799225629bc51b13df17b20bb8654d45b135fc"
@@ -968,8 +978,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "smash-svt"
+version = "0.8.0"
+source = "git+https://github.com/jam1garner/smash-svt#0d4252032996e26f03e913bb29bca6a2dd2304f4"
+dependencies = [
+ "binread 1.4.1",
+ "binwrite 0.2.1",
+ "serde",
+]
+
+[[package]]
 name = "smush-file"
-version = "0.5.1"
+version = "0.7.0"
 dependencies = [
  "binread 2.1.1",
  "humansize",
@@ -979,7 +999,9 @@ dependencies = [
  "serde_yaml",
  "smash-arc",
  "smash-csb",
+ "smash-fnv",
  "smash-sli",
+ "smash-svt",
  "sqb-rs",
  "ssbh_lib",
 ]

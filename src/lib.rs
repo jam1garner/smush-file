@@ -11,6 +11,8 @@ pub mod prc;
 pub mod sli;
 pub mod csb;
 pub mod sqb;
+pub mod svt;
+pub mod fnv;
 
 mod c_api;
 
@@ -23,6 +25,8 @@ pub enum FileType {
     Sli,
     Csb,
     Sqb,
+    Fnv,
+    Svt,
     Unsupported,
 }
 
@@ -43,6 +47,8 @@ impl FileType {
             "sli" => Self::Sli,
             "csb" => Self::Csb,
             "sqb" => Self::Sqb,
+            "fnv" => Self::Fnv,
+            "svt" => Self::Svt,
             _ => Self::Unsupported,
         }
     }
@@ -53,6 +59,8 @@ impl FileType {
             b"SSBH" => Some(Self::Ssbh),
             b"CSB\0" => Some(Self::Csb),
             b"SLI\0" => Some(Self::Sli),
+            b"FNV\0" => Some(Self::Fnv),
+            b"SVT\0" => Some(Self::Svt),
             b"SQB\0" => Some(Self::Sqb),
             _ => None
         }.unwrap_or_else(|| match &contents[..8] {
@@ -107,6 +115,8 @@ pub fn get_from_file_type(contents: &[u8], file_type: FileType) -> String {
         Sli => sli::info(contents),
         Csb => csb::info(contents),
         Sqb => sqb::info(contents),
+        Fnv => fnv::info(contents),
+        Svt => svt::info(contents),
         _ => format!("No info"),
     }
 }
